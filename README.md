@@ -1,3 +1,13 @@
+# eleventy-template
+Elgud's eleventy template to test out various CMS attachements and other things.
+
+Changes made to original eleventy:
+creation of src directory. This means changing some things in eleventy.js
+- input: "src"
+- eleventyConfig.addPassthroughcopy("src/img") and "src/css"
+
+
+Original README below.
 # eleventy-base-blog
 
 A starter repository showing how to build a blog with the [Eleventy](https://github.com/11ty/eleventy) static site generator.
