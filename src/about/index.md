@@ -7,4 +7,4 @@ eleventyNavigation:
  order: 1
 ---
 
-I am a person that writes stuff.
+I am a person that writes stuff and likes coding.
