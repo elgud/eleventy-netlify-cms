@@ -3,6 +3,10 @@ A clone of Elgud's eleventy template to test out various CMS attachements and ot
 
 This clone is to attempt to connect a site to netlify and to add the netlify cms and get it working.
 
+To get it working first of all:
+npm install
+npm clean-install
+
 Changes made to original eleventy:
 creation of src directory. This means changing some things in eleventy.js
 - input: "src"
