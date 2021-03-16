@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-post
+---
+<h1 class="text-center pb-4">{{ title }}</h1>
+
+{{ content | safe }}
+
+<hr>
+<!-- create a flex box where the two items go to far left and far right of 
+    the box -->
+<div class="d-flex justify-content-between text-center">
+  <div class="bg-info text-decoration-none py-2 me-1">
+    {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+    {%- if nextPost %} <a href="{{ nextPost.url | url }}" 
+        class="text-decoration-none px-3">
+        Next: {{ nextPost.data.title }}</a>{% endif %}
+  </div>
+  <div class="bg-info text-decoration-none py-2 ms-1">
+    {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+    {%- if previousPost %} <a href="{{ previousPost.url | url }}" 
+          class="text-decoration-none px-3">
+          Previous: {{ previousPost.data.title }}</a>{% endif %}
+  </div>
+</div>

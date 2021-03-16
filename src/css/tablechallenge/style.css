@@ -1,0 +1,91 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+figure {
+  width: 95%;
+}
+
+table, td, th {
+  border: 3px solid;
+  border-color: #800080;
+}
+
+table {
+  table-layout: fixed;
+  text-align: center;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead {
+  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)),url("leopardskin.jpg");
+  background-size: 80%;
+  color: white;
+  font-family: "Rock Salt", cursive, serif;
+  font-size: 0.65em;
+}
+
+tfoot {
+  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)),url("leopardskin.jpg");
+  background-size: 80%;
+  color: white;
+  font-family: "Rock Salt", cursive, serif;
+  font-size:0.65em;
+}
+
+tbody td {
+  background: url("noise.png");
+  border: none;
+  font-family: 'Helevetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 0.8em;
+}
+
+tbody tr:nth-child(odd) {
+  background-image: url("noise.png");
+  background-color: #ff33cc;
+}
+
+tbody tr:nth-child(even) {
+  background-image: url("noise.png");
+  background-color: #e495e4;
+}
+
+tbody td:nth-child(1){
+  font-weight: bold;
+}
+
+td, th {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#label {
+  text-align: right;
+  padding-right: 15px;
+}
+
+#total{
+  text-align: left;
+  padding-left: 15px;
+}
+
+caption {
+  caption-side: bottom;
+  text-align: right;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-family: "Rock Salt", cursive, serif;
+  font-size: 0.6em;
+  color: gray;
+  text-shadow: 0px 0px 1.5px gray;
+  font-style: italic;
+}

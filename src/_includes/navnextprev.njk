@@ -1,0 +1,40 @@
+<!-- create a flex box where the two items go to far left and far right of 
+    the box if this page is a child -->
+{% set children = collections.all | eleventyNavigation(eleventyNavigation.parent) %}
+{% if children.length %}
+  {% set next = 0 %}
+  {% set prev = -2 %}
+  {% set found = false %}
+  {% for child in children %}
+    {% if not found %}
+      {% set next = next + 1 %}
+      {% set prev = prev + 1 %}
+      {% if child.url == page.url %}
+        {% set found = true %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  <!--
+  <p> prev is {{prev}} and next is {{next}} </p>
+  <pre>{{ children[next] | dump(2) | safe}}</pre>
+  -->
+
+  <div class="d-flex justify-content-between text-center">
+    <div class="bg-info text-decoration-none py-2 me-1">
+      {%- if next < children.length %}
+        {% set child = children[next] %} 
+        <a href="{{ child.url | url }}" class="text-decoration-none px-3">
+        Next: {{ child.title }}</a>
+      {% endif %}
+    </div>
+
+    <div class="bg-info text-decoration-none py-2 ms-1">
+      {%- if prev >= 0 %} 
+        {% set child = children[prev] %}
+        <a href="{{ children[prev].url | url }}" class="text-decoration-none px-3">
+        Previous: {{ child.title }}</a>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}

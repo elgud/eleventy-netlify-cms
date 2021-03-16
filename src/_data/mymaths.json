@@ -1,0 +1,56 @@
+[
+    {
+        "functionname": "Factorial(positive-integer-number)",
+        "label": "factorial",
+        "code": [
+            "function factorial(number) {",
+            "    // check the argument",
+            "    if (isNaN(number))",
+            "       return 'the argumnet to factorial should be a number';",
+            "    if (!Number.isInteger(number) || number < 1 )",
+            "        return 'the argument to factorial must be a positive whole number greater or equal to one.';",
+            " ",
+            "    // do calculation",
+            "    if (number == 1)",
+            "        return 1;",
+            "    else",
+            "        return number * factorial(number - 1)",
+            "}"
+        ]
+    },
+    {
+        "functionname": "triangle(positive-integer-number)",
+        "label": "triangle",
+        "code": [
+            "/* The number of ball needed to make an equalateral triange of balls of side number */",
+            "function triangle(number) {",
+            "    // check the argument",
+            "    if (isNaN(number))",
+            "       return 'the argumnet to factorial should be a number';",
+            "    if (!Number.isInteger(number) || number < 1 )",
+            "        return 'the argument to factorial must be a positive whole number greater or equal to one.';",
+            " ",
+            "    // do calculation",
+            "       return number * (number + 1) / 2;",
+            "}"
+        ]
+    },
+    {
+        "functionname": "pyramid(positive-integernumber)",
+        "label": "pyramid",
+        "code": [
+            "/* calculate the number of balls need to make a tetrahedron of side length number",
+            "   This works out as the sum of the triangle numbers because each time, you add a layer that is a triangle.*/",
+            "function pyramid(number) {",
+            "    // check the argument",
+            "    if (isNaN(number))",
+            "       return 'the argumnet to factorial should be a number';",
+            "    if (!Number.isInteger(number) || number < 1 )",
+            "        return 'the argument to factorial must be a positive whole number greater or equal to one.';",
+            " ",
+            "     // do calculation",
+            "       return number * (number + 1) * (number + 2) / 6",
+            "}"
+        ]
+    }
+]

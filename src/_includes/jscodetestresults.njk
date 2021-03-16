@@ -1,0 +1,48 @@
+{% for entry in jscodelist %}
+    <div class="accordion-item" id="heading{{ entry.label }}">
+        <h2 class="accordion-header"> 
+            <button class="accordion-button collapsed fs-2" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#{{ entry.label }}" aria-expanded="false" 
+                aria-controls="{{ entry.label }}">
+                {{entry.taskname }} 
+            </button>
+        </h2>
+        <div id="{{ entry.label }}" class="accordion-collapse collapse" 
+            aria-labelledby="heading{{ entry.label }}" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div class="container p-0 bg-light">
+                    <div class="row">
+                        <div class="col">
+                            <div>
+                                <h3 class="text-center bg-primary py-2 mb-0"> Code </h3>
+                                <pre class="m-0 bg-light">
+{{ entry.code | newlineConcat}}
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col pe-0">
+                            <h3 class="text-center bg-warning py-2 mb-0"> Test code</h3>
+                            <div class="border-end border-info">
+                                <pre class="m-0 bg-light">
+{{ entry.testcode | newlineConcat }}
+                                </pre>
+                            </div>
+                        </div>
+
+                        <div class="col ps-0">    
+                            <h3 class="text-center bg-success py-2 mb-0"> Results </h3> 
+                            <div class="border-start border-info">
+                                <pre class="m-0 bg-light">
+{{ entry.results | newlineConcat }}              
+                                </pre>
+                            </div>    
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

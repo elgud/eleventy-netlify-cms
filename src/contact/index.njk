@@ -1,0 +1,94 @@
+---
+layout: layouts/post.njk
+title: Contact
+templateClass: tmpl-post
+eleventyNavigation:
+  key: Contact
+  order: 4
+---
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col" style="max-width:550px;">
+            <form class="border border-1 border-primary p-4" name="contact" method="POST" data-netlify="true">
+                <div class="mb-3">
+                    <label for="firstNname" class="form-label" >Your First Name: </label>
+                    <input id="firstNname" class="form-control w-100" type="text" name="firstName" required/>  
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label" >Your Last Name: </label>
+                    <input id="lastName" class="form-control w-100" type="text" name="lastName" required/>  
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label" >Your Email: </label>
+                    <input id="email" class="form-control w-100" type="email" name="email"  placeholder="name@example.com" aria-describedby="emailHelp" required /> 
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="role" class="form-label" >Your Role: </label>
+                    <select id="role" class="form-select dropdown-toggle w-50" name="role[]" data-bs-toggle="dropdown" aria-expanded="false">
+                            <option selected>Choose</option>
+                            <option value="leader">Leader</option>
+                            <option value="follower">Follower</option>
+                    </select>
+                </div>
+                <div class="mb-3 form-check">
+                    <label for="mailingList" class="form=label">Would you like to be added to our mailing list?"</label>
+                    <input class="form-check-input" type="checkbox" value="yes" id="mailingList" name="mailingList" checked>
+                    <div id="mailingListHelp" class="form-text">
+                        We will email you no more than once a month with information
+                         that might be of interest to you.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label" >Message: </label>
+                    <textarea id="message" class="form-control" rows="5" name="message"></textarea>
+                </div>
+                <div>
+                    <button class="btn btn-primary" type="form_submit">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    //get default border colours (to use on input when validation passes)
+    var borderStylePass = document.querySelector('#name').style.border;
+    //set fail border colours (to use on input when validation fails)
+    var borderStyleFail = '1px solid red';
+    //get the form submit button
+    var submit_button = document.querySelector('.form_submit');
+    //attach form event listener
+    submit_button.addEventListener("click", function(event){
+        //get the form "name" elemement
+        var name = document.querySelector('#name');
+        //get the form "email" element
+        var email = document.querySelector('#email');
+        //all validation is assumed to be passed until tested
+        blnValidated = true;
+        //change the border as it the validation passed
+        name.style.border = borderStylePass;
+        //if validation fails change the bln to false and change the input border colour
+        if(!first-name.value){
+            blnValidated = false;
+            name.style.border = borderStyleFail;
+        }
+        //if validation fails change the bln to false and change the input border colour
+        if(!last-name.value){
+            blnValidated = false;
+            name.style.border = borderStyleFail;
+        }
+        //if validation fails change the bln to false and change the input border colour
+        email.style.border = borderStylePass;
+        if(!email.value){
+            blnValidated = false;
+            email.style.border = borderStyleFail;
+        }
+        //if validation failed do not allow the form to submit the data
+        if(!blnValidated){
+            event.preventDefault();
+        }
+    }, false);
+</script>

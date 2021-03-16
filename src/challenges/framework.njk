@@ -1,0 +1,117 @@
+---
+title: Framework Challenge
+eleventyNavigation:
+  key: FrameworkChallenge
+  parent: Challenges
+  order: 2
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- link to bootstrap -->
+    <link rel="stylesheet" type="text/css" href="{{ '/css/bootstrap/css/bootstrap.min.css' | url }}"/>
+    <!-- own css, but this is no longer needed so commented out 
+        Bootstrap has removed the need to have a separate css file for responsiveness and
+        basic styling. 
+    <link rel="stylesheet" type="text/css" href="style.css" /> -->
+    <title>Visit Malaysian Coral Reefs</title>
+</head>
+<body>
+    <header class="p-4 pb-5">
+        <!-- add navbar -->
+        {% include "navbar.njk" %}
+        <br><hr><br>
+
+        <!-- challenge code starts here -->
+        <div class="d-flex align-items-center pb-4">
+            <a href="#" class="text-decoration-none border border-info 
+                                    border-5 rounded-circle ms-4 px-4 py-4
+                                        text-center bg-info bg-gradient">
+                <div class="fs-3  text-black-50">
+                        Explore<br>Adventures
+                </div>
+            </a>
+            <h1 class="flex-fill text-center me-3">Visit Malaysian Coral Reefs</h1>
+        </div>
+        <div class="container-fluid">
+        <!-- carousel code from getbootstrap.com/docs/5.0/components/carousel -->
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner ratio ratio-16x9">
+                <div class="carousel-item active">
+                    <img src="{{ '/img/frameworkchallenge/coral.jpg' | url }}"  class="d-block w-100" alt="Some coral">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ '/img/frameworkchallenge/coral2.jpg' | url }}"  class="d-block w-100" alt="Some colourful coral">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ '/img/frameworkchallenge/fish3.jpg' | url }}"  class="d-block w-100" alt="Some fish">
+                </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <main>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                        Quia laudantium distinctio, quod illum, deserunt nostrum modi, 
+                        eum assumenda aperiam non obcaecati? Ea minima asperiores 
+                        unde inventore eveniet optio, quisquam maiores?</p>
+                    
+                    <div class="ratio ratio-16x9 mb-3">
+                        <iframe src="https://www.youtube.com/embed/ZJy2r7MYyGM" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                        encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit ipsa, 
+                        laboriosam quos sunt rerum totam cumque provident, unde asperiores 
+                        maiores, aut vero temporibus velit ex eum. Expedita veniam eligendi 
+                        sed.</p>
+
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis illo 
+                        explicabo sapiente, iusto quae, provident dolore vero maxime quia ipsam 
+                        or cum laudantium nihil nisi, esse similique ut blanditiis sit?</p>
+                </main>
+            </div>
+
+            <div class="col-md-4 text-center">
+                <aside>
+                    <p class="fs-4">Next Departure Dates</p>
+                        <ul class="list=group">
+                            <li class="list-group-item">10th April 2021</li>
+                            <li class="list-group-item">24th April 2021</li>
+                            <li class="list-group-item">8th May 2021</li>
+                            <li class="list-group-item">22nd May 2021</li>
+                            <li class="list-group-item">5th June 2021</li>
+                            <li class="list-group-item">19th June 2021</li>
+                            <li class="list-group-item">3rd July 2021</li>
+                        </ul>                    
+                </aside>
+            </div>
+        </div>
+    </div>
+    <hr>
+    {% include "navnextprev.njk" %}
+    <hr>
+    <footer>
+        <p class="text-center">&copy; 2021 elgud.github.io</p>
+    </footer>
+
+    <script src="{{ '/css/bootstrap/js/bootstrap.min.js' | url }}"></script>
+</body>
+</html>
+

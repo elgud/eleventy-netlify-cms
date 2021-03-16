@@ -1,0 +1,47 @@
+---
+layout: layouts/post.njk
+title: Challenges
+templateClass: tmpl-post
+eleventyNavigation:
+  key: Challenges
+  parentType: index
+  order: 2
+---
+
+<h2>HTML / CSS Challenges</h2>
+<p>These are stand along pages and not part of this website proper. The navbar has been added 
+  as for the rest of the site, but because these pages are not part of the site proper, the 
+  styling will be different.
+</p>
+<br>
+
+<div class="container d-flex flex-wrap justify-content-center">
+
+  <!-- card for table challenge -->
+  <a class="cd-main-hover text-decoration-none m-4" href="{{ '/challenges/table' | url }}">
+    <div class="card bg-none border-0 p-2" style="width: 18rem;">
+      <img src="{{ '/img/tablechallenge/table.png' | url }}" class="card-img-top" alt="a difficult to read table of punk bands">
+      <div class="card-body">
+        <h5 class="card-title">HTML Table</h5>
+        <p class="card-text">A Challenge to create a fancy and difficult to read table of 
+          punk bands. Had to enlarge the picture in order to read it. </p>
+      </div>
+    </div>
+  </a>
+
+  <!-- card for framework challenge -->
+  <a class="cd-main-hover text-decoration-none m-4" href="{{ '/challenges/framework' | url }}">
+    <div class="card bg-none border-0 p-2" style="width: 18rem;">
+      <div class="ratio ratio-16x9">
+        <img src="{{ '/img/frameworkchallenge/coral.jpg' | url }}" class="card-img-top" alt="a difficult to read table of punk bands">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Framework</h5>
+        <p class="card-text">An exercise to learn how to use bootstrap: create a landing page 
+          with a logo, a carousel, a youtube video, and a sidebar with dates.  </p>
+      </div>
+    </div>
+  </a>
+
+</div>
+

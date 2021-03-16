@@ -1,0 +1,146 @@
+[
+  {
+    "taskname": "Task1: Function to output a message",
+    "label": "functiontask1",
+    "code": [
+        "function outputMessage(){",
+        "   console.log(\"This is a message\");",
+        "}"
+      ],
+    "testcode": [
+        "outputMessage();"
+      ],
+    "results": [
+        "This is a message"
+      ]
+  },
+  {
+    "taskname": "Task2: Function to create full name from first and last names",
+    "label": "functiontask2",
+    "code": [
+        "function createName(firstname, lastname) {",
+        "    fullName = firstname + ' ' + lastname;",
+        "    console.log(fullName);",
+        "}"
+      ],
+    "testcode": [
+        "createName('Jim','Stott');",
+        "var fname = 'Jane';",
+        "var lname = 'Leaver'",
+        "createName(fname,lname);"
+      ],
+    "results": [
+        "Jim Stott",
+        "Jane Leaver"
+      ]
+  },
+  {
+    "taskname": "Task3: Function return full name given first and last names",
+    "label": "functiontask3",
+    "code": [
+        "function createFullName(firstname, lastname) {",
+        "  return firstname + ' ' + lastname;",
+        "}"
+      ],
+    "testcode": [
+        "var fname = 'Jane';",
+        "var lname = 'Leaver'",
+        "var fullName = createFullName(fname, lname);",
+        "console.log(fullName);",
+        "console.log(createFullName(fname, lname));"
+      ],
+    "results": [
+        "Jane Leaver",
+        "Jane Leaver"
+      ]
+  },
+  {
+    "taskname": "Task4: should I wear a coat (based on above or below 10 C)?",
+    "label": "functiontask4",
+    "code": [
+        "function wearacoat(temp) {",
+        "  if (temp <10)",
+        "      return 'You should wear a coat when the temperature is '+temp;",
+        "  else",
+        "      return 'You should not wear a coat when the temperature is '+temp;",
+        "}"
+      ],
+    "testcode": [
+        "var temperature = 15;",
+        "console.log(wearacoat(temperature));",
+        "temperature = -5;",
+        "console.log(wearacoat(temperature));"
+      ],
+    "results": [
+        "You should not wear a coat when the temperature is 15",
+        "You should wear a coat when the temperature is -5"
+      ]
+  },
+  {
+    "taskname": "Task5: Should I wear a coat (temp above/below 0, 10, 15)?",
+    "label": "functiontask5",
+    "code": [
+        "function wearACoatExtra(temp){",
+        "  strMessage = 'You don\\'t need a coat';",
+        "  if (temp < 0) {",
+        "      strMessage  = 'Don\\'t go outside';",
+        "  }",
+        "  else if (temp < 10) {",
+        "      strMessage = 'You need a coat and hat';",
+        "  }",
+        " else if (temp < 15) {",
+        "      strMessage = 'You need a coat';",
+        "  }",
+        " ",  
+        "  return strMessage;",
+        "}"
+      ],
+    "testcode": [
+        "console.log(wearACoatExtra(-4));",
+        "console.log(wearACoatExtra(9));",
+        "console.log(wearACoatExtra(14));",
+        "console.log(wearACoatExtra(18));"
+      ],
+    "results": [
+        "Don't go outside",
+        "You need a coat and hat",
+        "You need a coat",
+        "You don't need a coat"
+      ]
+  },
+  {
+    "taskname": "Task6: Should I wear a coat? Third version.",
+    "label": "functiontask6",
+    "code": [
+        "function wearACoatExtraExtra(temp){",
+        "  var strMessage = '';",
+        "  if (temp < 0) {",
+        "      strMessage  = 'Don\\'t go outside';",
+        "  }",
+        " else if (temp < 10) {",
+        "      strMessage = 'You need a coat and hat';",
+        "  }",
+        "  else if (temp < 15) {",
+        "      strMessage = 'You need a coat';",
+        "  }",
+        "   if (!strMessage){",
+        "      strMessage = \"You don't need to wear a coat\";",
+        " }",
+        " ", 
+        "  return strMessage;",
+        "}"
+      ],
+    "testcode": [
+        "console.log(wearACoatExtra(-4));",
+        "console.log(wearACoatExtra(9));",
+        "console.log(wearACoatExtra(14));",
+        "console.log(wearACoatExtra(18));"
+      ],
+    "results": [
+        "Don't go outside",
+        "You need a coat and hat",
+        "You need a coat",
+        "You don't need to wear a coat"
+      ]
+  }
+]
