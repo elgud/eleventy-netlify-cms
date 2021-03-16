@@ -1,20 +1,20 @@
 {
   "title": "Elgud's Eleventy Netlify Site",
-  "url": "",
+  "url": "heuristic-ptolomy-70ff88.netlify.app",
   "description": "JAMStack examples site, to showcase my dev skills.",
   "feed": {
     "subtitle": "JAMStack examples site, to showcase my dev skills.",
     "filename": "feed.xml",
-    "path": "/feed/feed.xml",
+    "path": "heuristic-ptolomy-70ff88/feed/feed.xml",
     "id": ".netlify.app/"
   },
   "jsonfeed": {
     "path": "/feed/feed.json",
-    "url": ".netlify.app/feed/feed.json"
+    "url": "heuristic-ptolomy-70ff88.netlify.app/feed/feed.json"
   },
   "author": {
-    "name": "Your Name Here",
+    "name": "elgud",
     "email": "youremailaddress@example.com",
-    "url": ".netlify.app/about-me/"
+    "url": "heuristic-ptolomy-70ff88.netlify.app/about-me/"
   }
 }
