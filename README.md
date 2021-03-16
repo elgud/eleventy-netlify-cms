@@ -6,6 +6,7 @@ creation of src directory. This means changing some things in eleventy.js
 - input: "src"
 - eleventyConfig.addPassthroughcopy("src/img") and "src/css"
 
+There is a need to change the title and add urls to _data/metadata.json
 
 Original README below.
 # eleventy-base-blog
