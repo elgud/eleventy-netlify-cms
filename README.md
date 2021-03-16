@@ -1,5 +1,7 @@
-# eleventy-template
-Elgud's eleventy template to test out various CMS attachements and other things.
+# eleventy-netlify-cms
+A clone of Elgud's eleventy template to test out various CMS attachements and other things.
+
+This clone is to attempt to connect a site to netlify and to add the netlify cms and get it working.
 
 Changes made to original eleventy:
 creation of src directory. This means changing some things in eleventy.js
